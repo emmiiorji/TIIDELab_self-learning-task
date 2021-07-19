@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+body {
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* header{
+    width: 100%;
+    
+} */
+
+/* nav{
+    width: 100%;
+    background-color: blue;
+} */
+
+main {
+    width: 100%;
+}
+
+nav>a {
+    font-size: 1em;
+    color: black;
+    font-weight: bolder;
+    background-color: rgb(255, 255, 255);
+    width: 46%;
+    padding: 2%;
+    /* margin: 0px; */
+    text-decoration: none;
+    text-align: center;
+    float: left;
+}
+
+.banner {
+    width: 100%;
+    /* height: 500px; */
+    background: url(img/banner_img3.jpg) #6f6e6c;
+    background-size: 100%;
+    background-repeat: round;
+    color: white;
+    
+}
+
+.color-overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+h1{
+    font-size: 3em;
+}
+
+.formAdvertPane {
+    width: 38%;
+    float: left;
+    margin: 5% 3% 5% 12%; /*top right bottom left*/
+    padding: 5% 0; /*top/bottom left/right*/
+}
+div[class="formAdvertPane"] > h1 {
+    padding: 0 4%;
+}
+
+.signUp {
+    width: 32%; /*sum of class formAdvertPane's width, left & right margins, left & right paddings*/
+    float: left; /*and class signup's width, left & right margins, left & right paddings is 100%*/
+    margin: 5% 12% 5% 3%;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* #banner_img{
+    width: 100%;
+    height: 100%;
+} */
+
+.formContainer {
+    padding: 5%;
+}
+
+div[class="formContainer"] > h2 {
+    padding: 0 4%;
+}
+
+div[class="formContainer"] > p {
+    padding: 4% 4% 0 4%;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    width:95%;
+    padding: 2%;
+    margin: 1.5% 0;
+    border-radius: 7px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 2%;
+    margin: 1.5% 0;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: white;
+    background-color: #8dc641;
+
+}
+
+input:focus {
+    outline: none;
+
+}
+
+footer{
+    width: 70%;
+    background: #4c4c4c;
+    padding: 1% 15%;
+    color: white;
+}
+
+.ourOffer {
+    width: 80%;
+    margin: 40px 10%; /*Same left and right margins as .formAdvertPane and .signUp respectively*/
+    display: flex;
+    justify-content: space-between;
+    /* background-color: yellow; */
+}
+.offer {
+    width: 25%;
+    margin: 0 3% 0 3%;
+    text-align: center;
+    /* float: left; */
+    /* background-color: tomato; */
+} 
+.roundedBG {
+    
+    width: 35%;
+    height: auto; /*Since all the images are square sized in dimension, height and width will be equal*/
+    /* padding: 5%; */
+    margin: 0 32.5%; /*For the roundedBG to be at the center of of the specific offer display
+                    width + margin right + margin left + padding right + padding left = 100*/
+    background-color: #faf8f9;
+    border-radius: 50%;
+}
+div[class="offer"] > div[class="roundedBG"] > img{
+    width: 80%;
+    height: auto; /*Since the icons are squares, will be same as width*/
+    margin: 10%; /* Width + margin right + margin left = 100, height + margin top + margin bottom = 100*/
+    /* border-radius: 50%; */
+}
+div[class="user"] > div[class="roundedBG"] {
+    background-color: white;
+}
+
+.feedbackSection {
+    text-align: center;
+    background-color: #f3f3f3;
+    padding-top: 30px;
+}
+
+.clientsFeedback {
+    width: 70%;
+    padding: 0px 15% 0 15%;
+    display: flex;
+    justify-content: space-between;
+}
+section[class="feedbackSection"] > h2 {
+    margin-bottom: 50px;
+}
+
+.user {
+    width: 80%;
+    text-align: center;
+    padding: 0 10%;
+}
+div[class="user"] > div[class="roundedBG"] > img{
+    width: 95%;
+    /*padding: 2.5%; */
+    height: auto; /*Since the icons are squares, will be same as width*/
+    /*Normally, Width + margin right + margin left = 100, height + margin top + margin bottom = 100*/
+    margin: 3% 3% 0 3%; /*Unaware how extra margin bottom from roundedBG appeared under the image, used here to try to balance*/
+    border-radius: 50%;
+}
+
+.rating {
+    padding: 5% 0 20% 0;
+}
+.starRate {
+    background: gold;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+}
+
+/* Adjust displays of the headers for different screen sizes */
+@media screen and (max-width: 1110px) {
+    h1 {
+        font-size: 2.734rem;
+    }
+}
+@media screen and (max-width: 1013px) {
+    h1 {
+        font-size: 2.49875rem;
+    } 
+    h2 {
+        font-size: 1.373rem;
+    }
+    h3 {
+       font-size: 1rem;
+    }
+}
+@media screen and (max-width: 928px) {
+    h1 {
+        font-size: 1.999rem;
+    }
+    h2 {
+        font-size: 1.0975rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 745px) {
+    h1 {
+        font-size: 1.821rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Adjust display for submit button */
+@media screen and (max-width: 680px) {
+    input[type="submit"] {
+        width: 102.8%;
+        font-size: 0.72rem;
+        padding: 4%;
+    }
+}
+
+/* For mobile view*/
+@media screen and (max-width: 500px) {
+    /* .roundedBG {
+        width: 100px;
+    } */
+    .ourOffer {
+        width: 76%;
+        margin: 40px 12%;
+        display: block;
+    }
+    .offer {
+        width: 100%;
+        margin: 40px 0 40px 0;
+    }
+    .clientsFeedback {
+        width: 100%;
+        padding: 0px 0% 0 0%;
+        display: block;        
+    }    
+    .user {
+        padding: 0 0%;
+        width: 76%;
+        margin: 0 12%;
+    }
+    /* div[class="user"] > div[class="roundedBG"] > img {
+        width: 95%;
+        height: auto; 
+        margin: 2.5%;
+    } */
+
+    input[type="submit"] {
+        width: 100%;
+    }
+    .formAdvertPane {
+        display: block;
+        width: 94%;
+        text-align: center;
+        margin: 0;
+        padding: 5% 3% 5% 3%;
+    }
+    div[class="formAdvertPane"] > p {
+        text-align: justify;
+    }
+    div[class="formAdvertPane"] > h1 {
+        padding: 0;
+    }
+    .signUp {
+        display: block;
+        width: 94%;
+        margin: 0;
+        padding: 5% 3% 5% 3%;
+    }
+
+}
+
+@media screen and (max-width: 384px) {
+    nav>a {
+        width: 96%;
+    }
+}
